@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game Modern</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/poppins/4.0.0/font.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">Snake Game</h1>
+        <div class="game-stats">
+          <div class="stat-item">
+            <span>Score: </span>
+            <span id="score">0</span>
+          </div>
+          <div class="stat-item">
+            <span>High Score: </span>
+            <span id="highScore">0</span>
+          </div>
+          <div class="stat-item">
+            <span>Lives: </span>
+            <span id="lives">5</span>
+          </div>
+        </div>
+      </header>
+
+      <canvas
+        id="gameCanvas"
+        class="game-canvas"
+        width="500"
+        height="500"
+      ></canvas>
+
+      <div class="controls">
+        <button id="startBtn" class="game-button">Start</button>
+        <button id="pauseBtn" class="game-button">Pause</button>
+        <button id="resetBtn" class="game-button">Reset</button>
+      </div>
+
+      <div class="game-settings">
+        <select id="skinSelect" class="select-skin">
+          <option value="Verde Clássico">Verde Clássico</option>
+          <option value="Azul Neon">Azul Neon</option>
+          <option value="Vermelho Fogo">Vermelho Fogo</option>
+          <option value="Roxo Neon">Roxo Neon</option>
+        </select>
+      </div>
+    </main>
+
+    <!-- Audio elements -->
+    <audio
+      id="bgMusic"
+      src="audios/audio tela inicia.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="gameMusic"
+      src="audios/music-bckground.mp3"
+      preload="auto"
+    ></audio>
+    <audio id="eatSound" src="audios/eat.mp3" preload="auto"></audio>
+    <audio
+      id="gameOverSound"
+      src="audios/death sound.mp3"
+      preload="auto"
+    ></audio>
+    <audio id="power-Ups" src="audios/power-up.mp3" preload="auto"></audio>
+
+    <!-- Power-up images -->
+    <img hidden id="pw-Shield" src="assets/shield.png" alt="Shield power-up" />
+    <img
+      hidden
+      id="pw-Speed"
+      src="assets/high-speed.png"
+      alt="Speed power-up"
+    />
+    <img
+      hidden
+      id="pw-Points"
+      src="assets/dobra-pontos.png"
+      alt="Double Points power-up"
+    />
+    <img hidden id="Ob-Stone" src="assets/Obistaculo.png" alt="Obstacle" />
+    <img hidden id="gameOverImage" src="assets/Game Over.png" alt="Game Over" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
